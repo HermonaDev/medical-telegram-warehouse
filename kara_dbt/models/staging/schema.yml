@@ -1,0 +1,10 @@
+version: 2
+models:
+  - name: stg_telegram_data
+    columns:
+      - name: message_id
+        tests:
+          - not_null
+      - name: channel
+        tests:
+          - not_null
