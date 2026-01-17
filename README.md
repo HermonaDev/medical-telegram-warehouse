@@ -1,6 +1,6 @@
 # 🏥 Medical Telegram Data Warehouse & AI Pipeline
 
-[![Medical Data CI](https://github.com/YOUR_USERNAME/medical-telegram-warehouse/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/medical-telegram-warehouse/actions)
+[![Medical Data CI](https://github.com/HermonaDev/medical-telegram-warehouse/actions/workflows/ci.yml/badge.svg)](https://github.com/YOUR_USERNAME/medical-telegram-warehouse/actions)
 ![Python](https://img.shields.io/badge/python-3.9+-blue.svg)
 ![dbt](https://img.shields.io/badge/dbt-1.11.2-orange.svg)
 ![YOLOv8](https://img.shields.io/badge/AI-YOLOv8-green.svg)
