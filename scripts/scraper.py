@@ -4,12 +4,14 @@ import logging
 from datetime import datetime
 from telethon import TelegramClient
 from dotenv import load_dotenv
+from scripts.logger_config import get_logger
 
 # Load environment variables
 load_dotenv()
 api_id = os.getenv('TG_API_ID')
 api_hash = os.getenv('TG_API_HASH')
 
+logger = get_logger("TelegramScraper")
 # List of medical-related channels to scrape
 CHANNELS = [
     'lobelia4cosmetics', 
@@ -29,6 +31,9 @@ logging.basicConfig(
 )
 
 async def scrape_channel(client, channel_username):
+    """
+    Scrapes messages from a specific Telegram channel.
+    """
     # Ensure directory for images exists
     image_path = f'data/raw/images/{channel_username}'
     os.makedirs(image_path, exist_ok=True)
