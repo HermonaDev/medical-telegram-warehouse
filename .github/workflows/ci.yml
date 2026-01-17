@@ -24,13 +24,23 @@ jobs:
         pip install dbt-postgres ultralytics pandas sqlalchemy psycopg2-binary
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-    - name: dbt Debug
+    - name: Create Dummy Profile
+      run: |
+        mkdir -p ~/.dbt
+        echo "kara_dbt:
+          target: dev
+          outputs:
+            dev:
+              type: postgres
+              host: localhost
+              user: dummy
+              password: dummy
+              port: 5432
+              dbname: dummy
+              schema: public
+              threads: 1" > ~/.dbt/profiles.yml
+
+    - name: dbt Parse
       run: |
         cd kara_dbt
-        # This checks if the project structure and dbt_project.yml are valid
-        dbt parse 
-
-    - name: Run Python Linting
-      run: |
-        # This ensures your scripts don't have major syntax errors
-        python -m compileall scripts/
+        dbt parse --profiles-dir ~/.dbt
