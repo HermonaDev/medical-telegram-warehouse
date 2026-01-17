@@ -15,20 +15,17 @@ An end-to-end Data Engineering pipeline that extracts medical data from Telegram
 
 ---
 
-## 🏗 Project Architecture
-```text
-├── .github/workflows/   # CI/CD (GitHub Actions)
-├── data/
-│   ├── raw/             # Scraped JSON and Images
-│   └── yolo_results.csv # CV Inference output
-├── kara_dbt/            # dbt Project
-│   ├── models/
-│   │   ├── staging/     # Cleaning & Type Casting
-│   │   └── marts/       # Star Schema (Fact/Dim tables)
-│   └── schema.yml       # Data Documentation & Tests
-├── scripts/             # Python ETL & AI Scripts
-├── docker-compose.yml   # PostgreSQL Warehouse Setup
-└── requirements.txt     # Dependency Management
+## 📂 Project Structure
+├── api/                # API Endpoints (FastAPI)
+├── data/               # Raw and processed medical data
+├── docs/               # Documentation & Contribution guidelines
+├── kara_dbt/           # dbt Transformation project
+├── logs/               # Centralized pipeline logs
+├── notebooks/          # Data Exploration & AI Model Analysis
+├── scripts/            # Python ETL, Scraper, and YOLO Inference
+├── tests/              # Unit and Integration tests
+├── docker-compose.yml  # Warehouse environment (PostgreSQL)
+└── requirements.txt    # Project dependencies
 ```
 
 
