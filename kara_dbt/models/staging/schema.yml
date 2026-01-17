@@ -1,10 +1,11 @@
 version: 2
 models:
-  - name: stg_telegram_data
+  - name: fct_messages
     columns:
       - name: message_id
         tests:
+          - unique
           - not_null
-      - name: channel
+      - name: channel_key
         tests:
           - not_null
