@@ -6,4 +6,3 @@ logs/
 venv/
 .vscode/
 *.photos
-target/
