@@ -4,6 +4,8 @@ python-dotenv
 psycopg2-binary
 dbt-postgres
 ultralytics
+opencv-python
+sqlalchemy
 fastapi
 uvicorn
 dagster

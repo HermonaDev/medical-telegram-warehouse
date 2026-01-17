@@ -1,6 +1,8 @@
 version: 2
+
 sources:
   - name: telegram_raw
     schema: raw
     tables:
       - name: telegram_messages
+      - name: detection_results
