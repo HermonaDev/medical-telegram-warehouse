@@ -30,7 +30,7 @@ An end-to-end Data Engineering pipeline that extracts medical data from Telegram
 ```
 
 
-## 🚀 Key Achievements (Interim Report - Jan 17)
+## 🚀 Key Achievements
 
 * **Ingested**: 482 messages from 7 medical channels.
 * **Processed**: 468 objects detected in images (Bottles, Equipment, Labels).
