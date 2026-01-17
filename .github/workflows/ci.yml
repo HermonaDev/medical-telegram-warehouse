@@ -1,0 +1,36 @@
+name: Medical Data Warehouse CI
+
+on:
+  push:
+    branches: [ master, main ]
+  pull_request:
+    branches: [ master, main ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python 3.9
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.9"
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install dbt-postgres ultralytics pandas sqlalchemy psycopg2-binary
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+
+    - name: dbt Debug
+      run: |
+        cd kara_dbt
+        # This checks if the project structure and dbt_project.yml are valid
+        dbt parse 
+
+    - name: Run Python Linting
+      run: |
+        # This ensures your scripts don't have major syntax errors
+        python -m compileall scripts/
