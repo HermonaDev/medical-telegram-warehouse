@@ -16,6 +16,7 @@ An end-to-end Data Engineering pipeline that extracts medical data from Telegram
 ---
 
 ## 📂 Project Structure
+```
 ├── api/                # API Endpoints (FastAPI)
 ├── data/               # Raw and processed medical data
 ├── docs/               # Documentation & Contribution guidelines
