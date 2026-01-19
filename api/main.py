@@ -33,16 +33,8 @@ def get_top_medical_products(db: Session = Depends(get_db)):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Top Products Error: {str(e)}")
 
-@app.get("/analytics/channel-activity", response_model=List[schemas.ChannelActivity])
-def get_channel_volume(db: Session = Depends(get_db)):
-    query = text("""
-        SELECT c.channel_name, count(f.message_id) as message_count 
-        FROM marts.fct_messages f
-        JOIN marts.dim_channels c ON f.channel_key = c.channel_key
-        GROUP BY c.channel_name 
-        ORDER BY message_count DESC
-    """)
-    try:
-        return db.execute(query).mappings().all()
-    except SQLAlchemyError as e: # Catching specific DB errors only
-        raise HTTPException(status_code=500, detail="Database integrity error.")
+@app.get("/analytics/detections", response_model=List[schemas.DetectionDetail])
+def get_all_detections(db: Session = Depends(get_db)):
+    """New endpoint to align with analytical contract requirements."""
+    query = text("SELECT message_id, detected_item, image_category, confidence FROM marts.fct_image_detections")
+    return db.execute(query).mappings().all()

@@ -14,3 +14,12 @@ class DetectionSummary(BaseModel):
 
     class Config:
         from_attributes = True
+        
+class DetectionDetail(BaseModel):
+    message_id: int
+    detected_item: str
+    image_category: str
+    confidence: float
+
+    class Config:
+        from_attributes = True
