@@ -1,0 +1,55 @@
+ channel  |                                                       message_text                                                        | detected_item |     confidence     
+-----------+---------------------------------------------------------------------------------------------------------------------------+---------------+---------------------
+ cafimadEt |                                                                                                                           | bottle        |  0.7496940493583679
+ cafimadEt | Riluzole                                                                                                                  | book          | 0.41927871108055115
+ cafimadEt | Can't track down your drug? Med equipment out of reach?  cosmetic gone missing?                                          +| person        |  0.3155868649482727
+           | "መድሃንቱን ፈልጌ ፈልጌ ላገኝ አልቻልኩም 😭"                                                                                           +|               |
+           |                                                                                                                          +|               |
+           | We're the import team for the hard to find stuff—when searches all flop.                                                 +|               |
+           |                                                                                                                          +|               |
+           | Tried every spot? We're next.                                                                                            +|               |
+           | DM and order us—we'll grab it and send it your way fast! ⚡💊🩺💄                                                        +|               |
+           | @cafimEt                                                                                                                 +|               |
+           | @cafimEt                                                                                                                  |               |
+ cafimadEt | Can't track down your drug? Med equipment out of reach?  cosmetic gone missing?                                          +| person        |  0.5318731665611267
+           | "መድሃንቱን ፈልጌ ፈልጌ ላገኝ አልቻልኩም 😭"                                                                                           +|               |
+           |                                                                                                                          +|               |
+           | We're the import team for the hard to find stuff—when searches all flop.                                                 +|               |
+           |                                                                                                                          +|               |
+           | Tried every spot? We're next.                                                                                            +|               |
+           | DM and order us—we'll grab it and send it your way fast! ⚡💊🩺💄                                                        +|               |
+           | @cafimEt                                                                                                                 +|               |
+           | @cafimEt                                                                                                                  |               |
+ cafimadEt | Can't track down your drug? Med equipment out of reach?  cosmetic gone missing?                                          +| person        |  0.7094051837921143
+           | "መድሃንቱን ፈልጌ ፈልጌ ላገኝ አልቻልኩም 😭"                                                                                           +|               |
+           |                                                                                                                          +|               |
+           | We're the import team for the hard to find stuff—when searches all flop.                                                 +|               |
+           |                                                                                                                          +|               |
+           | Tried every spot? We're next.                                                                                            +|               |
+           | DM and order us—we'll grab it and send it your way fast! ⚡💊🩺💄                                                        +|               |
+           | @cafimEt                                                                                                                 +|               |
+           | @cafimEt                                                                                                                  |               |
+ cafimadEt | Welcome to Cafimad👋🏽                                                                                                   +| scissors      |  0.3422563076019287
+           |                                                                                                                          +|               |
+           | 💉መድሃኒት ለማግኘት ተቸግረዋል?  @cafimEt ያናግሩን                                                                                    +|               |
+           |                                                                                                                          +|               |
+           | 💉 Hard-to-find drugs or medical equipment?                                                                              +|               |
+           | DM @cafimEt – we reply fast                                                                                               |               |
+ CheMed123 | Mela-One በውስጡ ሆርሞን ያለው ድንገተኛ ወሊድ መቆጣጠርያ ሲሆን ያለመከላከያ የተደረገ የግብረስጋ ግንኙነት ሲኖር በ72 ሰዓታት ወስጥ መወሰድ ይኖርበታል።                     +| cup           |  0.3260035216808319
+           |                                                                                                                          +|               |
+           | 📌ከChe-Med ለማዘዝ፡                                                                                                         +|               |
+           | በቴሌግራም ግሩፓችን- t.me/CheMeds                                                                                               +|               |
+           | ዌብሳይት- www.chemeds.org                                                                                                   +|               |
+           | ይዘዙን።                                                                                                                     |               |
+ CheMed123 | **አዚትሮማይሲን** በሃኪም መድሃኒት ማዘዣ ከሚታዘዙ አንቲባዮቲኮች አንዱ ሲሆን በርከት ያሉ ባክቴርያዎችን ይገላል።                                                +| person        | 0.49181684851646423
+           |                                                                                                                          +|               |
+           | 📌የሃኪም ማዘዣ ካልዎት                                                                                                          +|               |
+           | በቴሌግራም ግሩፓችን-t.me/CheMeds                                                                                                +|               |
+           | ዌብሳይት- www.chemeds.org                                                                                                   +|               |
+           | ይላኩልን።                                                                                                                    |               |
+ CheMed123 | **Che-Med Trivia #3                                                                                                      +| cup           |   |  0.3855976164340973           |                                                                                                                          +|               |
+           | **ምግብና መጠጦች አንዳንድ መድሃኒቶች በደንብ እንዳይሰሩ ሊያደርጉ ይችላሉ። በዚህ ሁኔታ እነዚህን መድሃኒቶች ምግብ ከወሰድን ከ1 ሰዓት እስከ 2 ሰዓት ባለ ጊዜ ውስጥ መውሰድ ያስፈልግዎታል።+|               |
+           |                                                                                                                          +|               |
+           | ከነዚህም ወስጥ **የእንቅርት መድሃኒቶች፣Omeprazole፣Sildenafil(Viagra)፣Captopril እና Ampicillin** ይጠቀሳሉ።                                 +|               |
+           |                                                                                                                          +|               |
+           | መድሃኒትዎ ከምግብ ጋር ያለውን አወሳሰድ እርግጠኛ ካልሆኑ ሃኪምዎን ወይም ፋርማሲስትዎን ያማክሩ።                                                             |               |
