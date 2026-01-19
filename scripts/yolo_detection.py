@@ -54,19 +54,22 @@ def run_detection() -> None:
         for img_name in os.listdir(channel_path):
             img_path = os.path.join(channel_path, img_name)
             
-            # Run YOLO inference
-            # results is a list of ultralytics.engine.results.Results objects
+            try:
+                msg_id = int(os.path.basename(img_name).split('.')[0])
+            except ValueError:
+                msg_id = None  
+                
             results = model(img_path)
             
             for r in results:
                 for box in r.boxes:
-                    # Append detection metadata to results list
                     results_list.append({
+                        'message_id': msg_id,  
                         'channel': channel,
                         'image_path': img_name,
-                        'label': model.names[int(box.cls)],  # Convert class index to string label
-                        'confidence': float(box.conf),       # Accuracy score (0.0 to 1.0)
-                        'x_min': float(box.xyxy[0][0]),      # Bounding box coordinates
+                        'label': model.names[int(box.cls)],
+                        'confidence': float(box.conf),
+                        'x_min': float(box.xyxy[0][0]),
                         'y_min': float(box.xyxy[0][1]),
                         'x_max': float(box.xyxy[0][2]),
                         'y_max': float(box.xyxy[0][3])
