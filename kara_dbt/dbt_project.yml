@@ -32,6 +32,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 models:
   kara_dbt:
     staging:
+      +schema: staging
       +materialized: view
     marts:
+      +schema: marts
       +materialized: table
