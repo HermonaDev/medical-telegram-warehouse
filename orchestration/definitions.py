@@ -1,4 +1,4 @@
-from dagster import asset, Definitions
+from dagster import asset, Definitions, define_asset_job, ScheduleDefinition
 import subprocess
 import os
 import sys
@@ -30,4 +30,18 @@ def dbt_warehouse_models():
 
 defs = Definitions(
     assets=[telegram_scraper, yolo_object_detection, dbt_warehouse_models],
+)
+
+# 1. Define the Job
+medical_pipeline_job = define_asset_job("medical_pipeline_job", selection="*")
+
+# 2. Define the Schedule (Daily at Midnight)
+daily_medical_schedule = ScheduleDefinition(
+    job=medical_pipeline_job,
+    cron_schedule="0 0 * * *",
+)
+
+defs = Definitions(
+    assets=[telegram_scraper, yolo_object_detection, dbt_warehouse_models],
+    schedules=[daily_medical_schedule], # This adds the "Automation" requirement
 )

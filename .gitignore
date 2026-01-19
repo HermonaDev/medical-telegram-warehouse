@@ -22,6 +22,7 @@ storage/
 
 # Dagster temporary files
 .tmp_dagster_home_w5uw51ft/
+.tmp_dagster_home_dkmjy9e6/
 .dagster/
 dagster.yaml
 workspace.yaml
