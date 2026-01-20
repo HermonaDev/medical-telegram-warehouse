@@ -13,6 +13,22 @@ def get_db():
         yield db
     finally:
         db.close()
+        
+@app.get("/analytics/search")
+def search_messages(query: str, db: Session = Depends(get_db)):
+    """Requirement: Message Search endpoint."""
+    sql = text("SELECT * FROM marts.fct_messages WHERE message_text ILIKE :q")
+    return db.execute(sql, {"q": f"%{query}%"}).mappings().all()
+
+@app.get("/analytics/visual-report")
+def get_visual_report(db: Session = Depends(get_db)):
+    """Requirement: Visual-Content Report (Detections by Category)."""
+    sql = text("""
+        SELECT image_category, count(*) as total 
+        FROM marts.fct_image_detections 
+        GROUP BY image_category
+    """)
+    return db.execute(sql).mappings().all()
 
 @app.get("/analytics/top-products", response_model=List[schemas.DetectionSummary])
 def get_top_medical_products(db: Session = Depends(get_db)):
